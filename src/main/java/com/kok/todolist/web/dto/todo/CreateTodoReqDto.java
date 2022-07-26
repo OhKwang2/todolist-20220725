@@ -7,12 +7,12 @@ import lombok.Data;
 @Data
 public class CreateTodoReqDto {
 	private boolean importance;
-	private int todo;
+	private String todo;
 	
 	public Todo toEntity() {
 		return Todo.builder()
 				.importance_flag(importance ? 1:0)
-				.todo_code(todo)
+				.todo_content(todo)
 				.build();
 	}
 }
